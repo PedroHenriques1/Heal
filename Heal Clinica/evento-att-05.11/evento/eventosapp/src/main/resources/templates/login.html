@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Heal - Login</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <!-- CADASTRAR (SEM CONTA)-->
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Seja bem-vindo!</h2>
+                <br>
+                <p class="description description-primary">Registre-se com as suas informações!</p>
+                <p class="description description-primary">Caso não tem conta? Aperte o botão abaixo</p>
+                <br>
+                <button class="btn btn-primary" onclick="window.location.href='http://localhost:8080/cadastro';">Registre</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Entrar</h2>
+                <p class="description description-second">Informe o seu nome completo, e-mail e senha</p>
+                <form class="form">
+                    <label for="">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="Nome completo">
+                    </label>
+                    <label for="">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="example@example.com">
+                    </label>
+                    <label for="">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="********">
+                    </label>
+                    <button class="btn btn-second">Registrar</button>
+                </form>
+            </div>
+        </div>
+        <!-- ENTRAR (COM CONTA)-->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title">Bem-vindo de volta!</h2>
+                <p class="description">Entre na sua conta utilizando seu e-mail e senha</p>
+                <p class="description">Caso não tenha conta, aperte o botão abaixo</p>
+                <button class="btn">Cadastrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title">Crie sua conta</h2>
+                <p class="description">Utilize o seu e-mail para se registrar</p>
+                <form class="form">
+                    <input type="email" placeholder="example@example.com">
+                    <input type="password" placeholder="********">
+                    <a href="#">Esqueceu sua senha? Aperte aqui.</a>
+                    <button class="btn">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Editar Convidado</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Editar Convidado</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/eventos" class="waves-effect waves-light btn">
+                            <i class="material-icons left">format_list_bulleted</i>
+                            Lista de evento
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form th:action="@{/atualizarConvidado}" method="post">
+            <input type="hidden" name="rg" th:value="${convidado.rg}"/>
+            Nome: <input type="text" name="nomeConvidado" th:value="${convidado.nomeConvidado}" required />
+            <button class="btn waves-effect waves-light" type="submit">Atualizar
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

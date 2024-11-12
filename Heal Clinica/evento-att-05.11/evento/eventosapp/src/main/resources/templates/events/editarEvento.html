@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Editar Evento</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Editar Evento</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/eventos" class="waves-effect waves-light btn">
+                            <i class="material-icons left">format_list_bulleted</i>Lista de eventos
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h5>Editar Evento</h5>
+        <form th:action="@{/atualizarEvento(codigo=${evento.codigo})}" th:object="${evento}" method="post">
+            <input type="hidden" th:value="${codigo}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" th:value="${evento.nome}" required />
+                </div>
+                <div class="input-field col s12">
+                    <label for="local">Local</label>
+                    <input type="text" name="local" th:value="${evento.local}" required />
+                </div>
+                <div class="input-field col s6">
+                    <label for="data">Data</label>
+                    <input type="date" name="data" th:value="${evento.data}" required />
+                </div>
+                <div class="input-field col s6">
+                    <label for="horario">Horário</label>
+                    <input type="time" name="horario" th:value="${evento.horario}" required />
+                </div>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit">Atualizar
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

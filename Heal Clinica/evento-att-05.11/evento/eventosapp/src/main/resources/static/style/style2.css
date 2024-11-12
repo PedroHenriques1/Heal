@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+
+}
+
+body{
+    background-color: #EBEDF1;
+}
+
+section, 
+footer {
+    padding: 30px 0;
+}
+
+h3{
+    font-size: 50px;
+}
+
+p{
+    color:black;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff; /* Cor do texto */
+    background-color: transparent; /* Sem fundo */
+    border: 2px solid #6696f0; /* Contorno com espessura de 2px */
+    border-radius: 10px; /* Bordas arredondadas, opcional */
+    cursor: pointer;
+    transition: 0.1s; /* Animação para hover */
+    display: inline-block;
+}
+
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+    background-color: #6696f0;
+}
+
+.btn:hover {
+    background-color: #6696f0; /* Fundo azul ao passar o mouse */
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #6696f0;
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+
+    }
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul a{
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #6696f0;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+/* Banner */
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text{
+    text-align: center;
+    margin: 150px;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1{
+    font-size: 45px;
+    color: white;
+}
+
+.banner .banner-text p{
+    color: #ffffffb7;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 20px 0;
+}
+/* Faca Mais */
+.faca-mais .container{
+    display: flex;
+    align-items: center;
+}
+
+.faca-mais .faca-mais-text{
+    width: 50%;
+    padding: 0 40px;
+}
+
+.faca-mais .faca-mais-text h3{
+    font-size: 40px;
+}
+
+.faca-mais .faca-mais-text p{
+    margin: 5px 0 10px 0;
+}
+
+.faca-mais .faca-mais-img{
+    width: 50%;
+    height: auto;
+}
+
+.faca-mais .faca-mais-img img{
+    width: 100%;
+    height: auto;    
+}
+
+/* Avaliações */
+.avaliacoes h3{
+    text-align: center;
+}
+
+.avaliacoes p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.avaliacoes .card-item{
+    background-color: #b0c6f0;
+    margin: 14px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.avaliacoes .card-item img{
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.avaliacoes .card-item .nome-user{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #3a6fcf;
+}
+
+.avaliacoes .card-item .avaliacao-user{
+    font-size: 15px;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.avaliacoes .card-item .estrelas{
+    color: #3a6fcf;
+    border-top: 2px solid #71767a23;
+    margin: 15px 0;
+}
+
+.avaliacoes .card-item .estrelas i{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #457ce0;
+}
+
+.avaliacoes .card-item:hover{
+    background-color: #d3d9e7;
+    margin-top: -5px;
+}
+
+.avaliacoes .card-item:hover .name-user,
+.avaliacoes .card-item:hover .avaliacao-user{
+    color: #3a6fcf;
+    margin-top: -5px;
+}
+
+/*Clientes*/
+.clientes h3{
+    text-align: center;
+}
+
+.clientes p{
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.clientes .container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.clientes .container div img{
+    width: 20%;
+    height: auto;
+}
+
+/*footer*/
+.footer {
+    background-color: #6696f0;
+    text-align: center;
+}
+
+.footer p{
+    padding: 20px 0;
+    color: white;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #5889af;
+    width: 40%;
+    height: 100%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary {
+    color: #fff;
+}
+
+.title-second {
+    color: #5889af;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.description-primary{
+    color: #fff;
+}
+
+.description-second{
+    color: #7f8c8d;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border-width: 0px;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: #5889af;
+}
+
+.btn-second {
+    background-color: #5889af;
+    border: 1px solid #5889af;
+}
+
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #5889af;
+    color: #5889af;
+}
+
+.first-column {
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column {
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-content {
+    display: flex;
+}
+
+.second-content {
+    position: absolute;
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    margin: 8px;
+}
