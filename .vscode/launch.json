@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HealApplication<heal>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.anhembi.heal.HealApplication",
+            "projectName": "heal",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

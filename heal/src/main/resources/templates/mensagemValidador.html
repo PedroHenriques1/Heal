@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymelead.org">
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .alert-sucess {
+            background-color: #28a745;
+            border: 1px solid #218838;
+        }
+
+        .alert-dismissible {
+            position: relative;
+        }
+
+        .alert-dismissible::after {
+            content: "✖";
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .alert span {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert alert-sucess alert-dismissible" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+        <span th:text="${mensagem}"></span>
+    </div>
+</body>
+
+</html>

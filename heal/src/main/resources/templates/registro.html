@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style3.css">
+    <title>Formulário de cadastro</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="form-image">
+                <img src="/assets/Heal Animado.png" alt="form-image">
+            </div>
+            <div class="form">
+                <form action="/salvarMedico" method="POST">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="/login">Entrar</a></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Primeiro Nome</label>
+                            <input type="text" name="nome" placeholder="Digite seu primeiro nome" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="lastname">Sobrenome</label>
+                            <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="number">Celular</label>
+                            <input type="tel" name="celular" placeholder="(DDD) xxxx-xxxx" required maxlength="11"> 
+                        </div>
+
+                        <div class="input-box">
+                            <label for="specialty">Especialidade</label>
+                            <input type="spc" name="especialidade" placeholder="Clínico geral" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input type="password" name="senha" placeholder="Digite sua senha" required>
+                        </div>
+
+
+                        <div class="input-box">
+                            <label for="confirmPassword">Confirme sua Senha</label>
+                            <input type="password" name="confirmarSenha" placeholder="Digite sua senha novamente"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                            <h6>Gênero</h6>
+                        </div>
+
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input id="female" type="radio" name="genero" value="feminino">
+                                <label for="female">Feminino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input id="male" type="radio" name="genero" value="masculino">
+                                <label for="male">Masculino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input id="others" type="radio" name="genero" value="outros">
+                                <label for="others">Outros</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input id="none" type="radio" name="genero" value="pnd">
+                                <label for="none">Prefiro não dizer</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="continue-button">
+                        <button type="submit">Continuar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

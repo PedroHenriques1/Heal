@@ -1,0 +1,65 @@
+.detalhesEvento {
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.formConvidado {
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.formConvidado form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formConvidado button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-wrapper ul#nav-mobile {
+        display: block;
+        text-align: center;
+    }
+
+    .formConvidado {
+        width: 100%;
+    }
+}
+
+.tabelaConvidado {
+    width: 50%;
+}
+
+.nav-wrapper ul#nav-mobile li a {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.nav-wrapper ul#nav-mobile {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.nav-wrapper ul#nav-mobile li {
+    display: inline-block;
+    width: auto;
+}
+
+.cadastroEvent {
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Editar Paciente</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Editar Paciente</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/pacientes" class="waves-effect waves-light btn">
+                            <i class="material-icons left">format_list_bulleted</i>Lista de Pacientes
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form th:action="@{/atualizarPaciente(rg=${paciente.rg})}" th:object="${paciente}" method="post">
+            <input type="hidden" th:value="${paciente.rg}" />
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nomeCompleto" th:value="${paciente.nomeCompleto}" required />
+                </div>
+                <div class="input-field col s12">
+                    <label for="text">Local</label>
+                    <input type="text" name="local" th:value="${paciente.local}" required />
+                </div>
+                <div class="input-field col s12">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" th:value="${paciente.telefone}" required />
+                </div>
+                <div class="input-field col s6">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" name="dataNascimento" th:value="${paciente.dataNascimento}" required />
+                </div>
+                <div class="input-field col s6">
+                    <label for="sexo">Sexo</label>
+                    <input type="text" name="sexo" th:value="${paciente.sexo}" required />
+                </div>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit">Atualizar
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

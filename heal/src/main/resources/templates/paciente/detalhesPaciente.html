@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Detalhes do Paciente</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/styleDetalhesPaciente.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Agendamento</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="/pacientes" class="waves-effect waves-light btn">
+                            <i class="material-icons left">format_list_bulleted</i>
+                            Lista de Pacientes
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container detalhesPaciente">
+
+        <h5>Detalhes do Paciente</h5>
+        <div class="row">
+            <p>Nome: <span th:text="${paciente.nomeCompleto}"></span></p>
+            <p>RG: <span th:text="${paciente.rg}"></span></p>
+            <p>Data de Nascimento: <span th:text="${paciente.dataNascimento}"></span></p>
+            <p>Telefone: <span th:text="${paciente.telefone}"></span></p>
+            <p>Sexo: <span th:text="${paciente.sexo}"></span></p>
+        </div>
+    </div>
+
+    <th:block th:include="mensagemValidador"></th:block>
+
+    <div class="container formConsulta">
+        <form th:action="@{/detalhesPaciente/{rg}(rg=${paciente.rg})}" method="post">
+            Nome da Consulta: <input type="text" name="nomeConsulta" placeholder="xxxxx" required />
+            Data da Consulta: <input type="date" name="dataConsulta" placeholder="dd/MM/yyyy" required />
+            Hora da Consulta: <input type="time" name="horaConsulta" placeholder="hh:mm" required />
+
+            <label for="medico"></label>
+            <select name="medico.id" required>
+                <option th:each="medico : ${medicos}" th:value="${medico.id}" th:text="${medico.nome}"></option>
+            </select>
+
+            <br><br>
+            <button class="waves-effect waves-light btn" type="submit">Adicionar Consulta</button>
+            <br><br>
+        </form>
+    </div>
+
+    <table class="container tabelaConsulta">
+        <thead>
+            <tr>
+                <th>Nome da Consulta</th>
+                <th>Data da Consulta</th>
+                <th>Hora da Consulta</th>
+                <th>Médico responsável</th>
+                <th>Deletar</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="consulta : ${consultas}">
+                <td><span th:text="${consulta.nomeConsulta}"></span></td>
+                <td><span th:text="${consulta.dataConsulta}"></span></td>
+                <td><span th:text="${consulta.horaConsulta}"></span></td>
+                <td><span th:text="${consulta.medico.nome}"></span></td>
+
+                <td><a class="waves-effect waves-light btn-small"
+                        th:href="@{/deletarConsulta(codigo = ${consulta.codigo})}">
+                        <i class="material-icons left">delete</i></a></td>
+
+                <td><a class="waves-effect waves-light btn-small"
+                        th:href="@{/editarConsulta(codigo = ${consulta.codigo})}">
+                        <i class="material-icons left">create</i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- JavaScript at end of body for optimized loading -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

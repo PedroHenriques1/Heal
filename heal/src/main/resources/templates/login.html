@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style3.css">
+    <title>Formulário de Login</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Exibir mensagem de erro, se houver -->
+        <div th:if="${erro}" class="card-panel red lighten-4 red-text text-darken-4">
+            <span th:text="${erro}"></span>
+        </div>
+
+        <div class="form-image">
+            <img src="/assets/Heal Animado.png" alt="form-image">
+        </div>
+        <div class="form">
+            <form action="/login" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="/registro">Cadastre-se</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit">Entrar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

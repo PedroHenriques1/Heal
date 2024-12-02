@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Heal</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+   <!-- Sidebar -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://via.placeholder.com/300x150" alt="Background">
+                </div>
+                <a href="#user"><img class="circle" src="https://via.placeholder.com/100" alt="User"></a>
+                <a href="#name"><span class="white-text name">Bem-vindo(a)</span></a>
+                <a href="#email"><span class="white-text email">admin@heal.com</span></a>
+            </div>
+        </li>
+        <li><a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="/cadastrarPaciente" class="waves-effect"><i class="material-icons">person_add</i>Cadastrar Novo Paciente</a></li>
+        <li><a href="/logout" class="waves-effect"><i class="material-icons">exit_to_app</i>Sair</a></li>
+    </ul> 
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                
+    <!-- Navbar -->
+    <header>
+        <nav class="nav-wrapper blue darken-3">
+            <div class="container">
+                <a href="/" class="brand-logo">
+                    <img src="/assets/logo.png" alt="Logo" style="height: 50px; position: absolute; bottom: -55px; left: 10px;">
+                </a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/" class="waves-effect"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="/cadastrarPaciente" class="waves-effect"><i class="material-icons left">person_add</i>Cadastrar Novo Paciente</a></li>
+                    <li><a href="/logout" class="waves-effect"><i class="material-icons left">exit_to_app</i>Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Local</th>
+                <th>Data de nascimento</th>
+                <th>Sexo</th>
+                <th>Deletar</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="paciente : ${pacientes}">
+                <td><a th:href="@{/detalhesPaciente/{rg}(rg=${paciente.rg})}"><span
+                            th:text="${paciente.nomeCompleto}"></span></a></td>
+                <td th:text="${paciente.local}"></span></td>
+                <td th:text="${paciente.dataNascimento}"></td>
+                <td th:text="${paciente.sexo}"></td>
+
+                <td><a class="waves-effect waves-light btn-small"
+                        th:href="@{/deletarPaciente/{rg}(rg = ${paciente.rg})}">
+                        <i class="material-icons left">delete</i></a></td>
+
+                <td><a class="waves-effect waves-light btn-small"
+                        th:href="@{/editarPaciente/{rg}(rg = ${paciente.rg})}">
+                        <i class="material-icons left">create</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- JavaScript at end of body for optimized loading -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    <script>
+        // Inicializa o sidenav
+        document.addEventListener('DOMContentLoaded', function () {
+            const elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>
