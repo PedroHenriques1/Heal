@@ -6,7 +6,7 @@ Este projeto foi desenvolvido com foco na organização e gerenciamento de clín
 médicos e agendamentos de consultas, promovendo uma gestão eficiente e centralizada das informações clínicas.
 
 **Tecnologias utilizadas:**
-- **Back-end:** Java com Spring Boot e banco de dados MySQL  
+- **Back-end:** Java com Spring Boot, CRUD, MVC e banco de dados MySQL  
 - **Front-end:** HTML, CSS e JavaScript
 
 ---
@@ -32,7 +32,8 @@ A **Heal** tem como objetivo otimizar o dia a dia de clínicas de pequeno, médi
 ## 🖼️ Prévia da Aplicação
 
 ### 🏠 Tela Inicial
-![Tela Inicial](image)
+![Tela Inicial](![image](https://github.com/user-attachments/assets/9fbb5eee-2ca6-4193-9cb8-469e1a3914b1)
+)
 
 ![Imagem](image)  
 ![Imagem](image)  
