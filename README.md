@@ -32,8 +32,8 @@ A **Heal** tem como objetivo otimizar o dia a dia de clínicas de pequeno, médi
 ## 🖼️ Prévia da Aplicação
 
 ### 🏠 Tela Inicial
-![Tela Inicial](![image](https://github.com/user-attachments/assets/9fbb5eee-2ca6-4193-9cb8-469e1a3914b1)
-)
+![image](https://github.com/user-attachments/assets/80184ddb-498f-4249-8128-a3797653cb62)
+
 
 ![Imagem](image)  
 ![Imagem](image)  
