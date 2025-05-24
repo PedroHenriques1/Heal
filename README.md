@@ -2,8 +2,7 @@
 
 ## 📋 Descrição da Aplicação
 
-Este projeto foi desenvolvido com foco na organização e gerenciamento de clínicas médicas. A plataforma **Heal** oferece recursos para controle de pacientes,
-médicos e agendamentos de consultas, promovendo uma gestão eficiente e centralizada das informações clínicas.
+O Trabalho da A3 - Dual Bradesco resultou na criação da plataforma Heal, voltada à gestão de clínicas médicas. O sistema permite o controle de pacientes, médicos e agendamentos, centralizando as informações e facilitando a administração clínica.
 
 **Tecnologias utilizadas:**
 - **Back-end:** Java com Spring Boot, CRUD, MVC e banco de dados MySQL  
