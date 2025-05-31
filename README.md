@@ -12,7 +12,7 @@ O Trabalho da A3 - Dual Bradesco resultou na criação da plataforma Heal, volta
 
 ## 🎯 Objetivo
 
-A **Heal** tem como objetivo otimizar o dia a dia de clínicas de pequeno, médio e grande porte, proporcionando:
+A **Heal** tem como objetivo otimizar o dia a dia de clínicas de pequeno e médio porte, proporcionando:
 
 - Melhor organização no agendamento de consultas  
 - Cadastro eficiente de pacientes e profissionais de saúde  
